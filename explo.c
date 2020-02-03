@@ -105,7 +105,7 @@ if(strcmp(decision,"avantposte") == 0 && lieux[save].difficulte >= 10){
   printf("tu creer un avant poste !\n");
   lieux[save].difficulte = lieux[save].difficulte/2;
   strcpy(lieux[save].desc_2, "il y a un avant poste\n");
-  printf("la difficulte est : %d", lieux[save].difficulte);
+  printf("la difficulte est : %d\n", lieux[save].difficulte);
 }
 else if ((strcmp(decision,"avantposte") == 0 && lieux[save].difficulte < 10)){
   printf("Tu ne peux pas creer d'avant poste !\n");
