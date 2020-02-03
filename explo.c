@@ -8,7 +8,7 @@ int reponse =1;
 int loop =1;
 int compteur =0;
 int save;
-int compteur_possibility;
+
 
 struct Lieu{
 
@@ -23,6 +23,7 @@ typedef struct Lieu lieu;
 
 
 
+
 void nom( char * decision, lieu * lieu){
 reponse =0;
 reponse = strcmp(decision, (*lieu).nom  );
@@ -32,7 +33,6 @@ reponse = strcmp(decision, (*lieu).nom  );
 }
 
 void deplacement(lieu * lieux){
-
   while(reponse !=0 && compteur <=3){
    compteur +=1;
    nom(decision, &lieux[compteur]);
@@ -43,11 +43,15 @@ if(reponse == 0){
   printf("Tu te dirige vers %s\n ", decision);
   printf("%s", lieux[save].desc);
 }
+
 printf("ou veux tu aller ?\n ");
 printf("tu peux aller : %s\n", lieux[lieux[save].tableau[1]].nom);
 printf("tu peux aller : %s\n", lieux[lieux[save].tableau[2]].nom);
 }
 
+
+
+}
 
 
 int main(){
@@ -81,6 +85,7 @@ printf("Ou veux tu aller ?\n");
 scanf("%s", decision);
 
 
+
 while(loop == 1){
   if(strcmp(decision, lieux[save].nom) !=0){
             deplacement(&lieux[0]);
@@ -104,3 +109,17 @@ if(strcmp(decision, lieux[save].nom) ==0)
 
   return 0;
 }
+
+deplacement(&lieux[0]);
+
+
+
+
+
+
+
+
+
+  return 0;
+}
+
