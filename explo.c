@@ -113,9 +113,11 @@ else if ((strcmp(decision,"avantposte") == 0 && lieux[save].difficulte < 10)){
 
 if(strcmp(decision,"repos") == 0 && lieux[save].difficulte <= 5){
   printf("tu te repose \n");
+  compteur_repos = 0;
   while(stamina < 100 && compteur_repos < 50 ){
     compteur_repos += 1;
     stamina = stamina + compteur_repos;
+    printf("compteur : %d", compteur_repos);
   }
   printf("tu as %d stamina ! \n", stamina);
 }
