@@ -22,6 +22,7 @@ typedef struct Lieu lieu;
 
 
 
+
 void nom( char * decision, lieu * lieu){
 reponse =0;
 reponse = strcmp(decision, (*lieu).nom  );
@@ -43,6 +44,7 @@ if(reponse == 0){
 }
 
 }
+
 
 
 
@@ -75,7 +77,10 @@ int main(){
 printf("Ou veux tu aller ?\n");
 scanf("%s", decision);
 
+
 deplacement(&lieux[0]);
+
+
 
 
 
