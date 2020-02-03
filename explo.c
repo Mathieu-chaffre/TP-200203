@@ -10,17 +10,18 @@ char decision[20];
 int reponse;
 
 
-
 int main(){
   printf("tu peux aller %s ou %s\n", lieu, lieu2);
 printf("Ou veux tu aller ?\n");
 scanf("%s", decision);
+
 
 if(strcmp(decision, lieu2) == 0){
   printf("tu va a la plage");
 }
 if(strcmp(decision, lieu) == 0){
   printf("tu va a la montagne");
+
 }
 
 
