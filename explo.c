@@ -9,6 +9,7 @@ int loop =1;
 int compteur =0;
 int save;
 
+
 struct Lieu{
 
 char nom[25];
@@ -43,9 +44,14 @@ if(reponse == 0){
   printf("%s", lieux[save].desc);
 }
 
+printf("ou veux tu aller ?\n ");
+printf("tu peux aller : %s\n", lieux[lieux[save].tableau[1]].nom);
+printf("tu peux aller : %s\n", lieux[lieux[save].tableau[2]].nom);
 }
 
 
+
+}
 
 
 int main(){
@@ -73,10 +79,36 @@ int main(){
 
 
 
+
   printf("tu peux aller %s ou %s ou encore %s\n", lieux[1].nom , lieux[2].nom, lieux[3].nom );
 printf("Ou veux tu aller ?\n");
 scanf("%s", decision);
 
+
+
+while(loop == 1){
+  if(strcmp(decision, lieux[save].nom) !=0){
+            deplacement(&lieux[0]);
+
+}
+
+
+
+
+scanf("%s", decision);
+
+if(strcmp(decision, "arreter")==0){
+  loop =0;
+}
+if(strcmp(decision, lieux[save].nom) ==0)
+            printf("tu ne peux pas effectuer ce deplacements\n");
+}
+
+
+
+
+  return 0;
+}
 
 deplacement(&lieux[0]);
 
@@ -90,3 +122,4 @@ deplacement(&lieux[0]);
 
   return 0;
 }
+
