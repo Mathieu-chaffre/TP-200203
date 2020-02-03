@@ -9,29 +9,20 @@ char lieu2[20]= "plage";
 char decision[20];
 int reponse;
 
-void nom(char * nom1, char * nom2){
-  int reponse;
-reponse = strcmp( lieu, decision );
-
-}
 
 int main(){
   printf("tu peux aller %s ou %s\n", lieu, lieu2);
 printf("Ou veux tu aller ?\n");
 scanf("%s", decision);
 
-nom(lieu, decision);
-nom(lieu2, decision);
 
-
-
-if(reponse <0 || reponse  > 0){
-  printf("ce lieu n'existe pas");
+if(strcmp(decision, lieu2) == 0){
+  printf("tu va a la plage");
 }
-else if (reponse == 0){
-  printf("tu va %s", decision);
+if(strcmp(decision, lieu) == 0){
+  printf("tu va a la montagne");
+
 }
 
 
   return 0;
-}
